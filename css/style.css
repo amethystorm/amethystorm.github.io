@@ -1,46 +1,42 @@
 body{
     position: relative;
     height: 100%;
-    background-color: #ffffff;
-    overflow: hidden;
-    margin: 0;
-    font-size: 1.4rem;
-    line-height: 1.7;
-}
-.content{
-    position: relative;
-    height: 100%;
     width: 100%;
+    background-color: black;
+    font-family: Helvetica, Menlo, "Helvetica Neue", fantasy;
     overflow-y: scroll;
     overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.content{
+    height: 100%;
+    width: 100%;
+    background-color: white;
 }
 .cover{
     position: relative;
-    padding: 0;
     text-align: center;
     margin-bottom: 3rem;
+    z-index: 0;
 }
 
 .cover_frame{
     position: relative;
-    min-width: 100%;
     height: 100vh;
+    width: 100vw;
 }
 
-.cover_frame.cover_img{
-    width: 100%;
-    height: 100%;
-}
 
-.cover_frame .cover_img>img{
+.cover_frame>img{
     display: block;
     height: 100vh;
     width: 100vw;
     object-fit: cover;
     object-position: center center;
-}
-img{
-    max-width: 100%;
     border-style: none;
 }
 
@@ -50,10 +46,91 @@ img{
     left: 50%;
     transform: translate(-50%,-70%);
 }
-
 .cover_inner h1{
-    font-size: 3.5rem;
+    font-size: 4rem;
     color: white;
     opacity: 0.9;
 }
 
+
+.sidebar{
+    left: 0;
+    background-color: black;
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+    width: 6rem;
+    height: 100%;
+    opacity: 0.6;
+}
+
+.navbar {
+    position: relative;
+    padding-top: 3rem;
+    text-align: center;
+}
+
+.logo {
+    margin-bottom: 2rem;
+}
+.logo>img{
+    margin-left: 0.5rem;
+    display: block;
+    max-width: 5rem;
+    max-height: 5rem;
+}
+.navbar .nav {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.navbar .nav .nav-item-link {
+    font-size: 0.95rem;
+    text-align: center;
+    display: block;
+    padding: 0.5rem;
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.outer {
+    width: calc(100% - 11rem);
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+
+.footer{
+    border-top: 2px solid #f6f6f6;
+    padding: 2rem 0;
+    background-color: white;
+}
+
+.footer .outer>ul{
+    text-align: center;
+    position: relative;
+}
+
+.article-title {
+    position: relative;
+    width: 100%;
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 3rem;
+    text-decoration: none;
+    color: #403e3e;
+    padding-left: 2rem;
+    border-left: 4px solid #403e3e;
+}
+.article-entry {
+    font-size: 100%;
+    margin-top: 1rem;
+    line-height: 1.6;
+    color: #403e3e;
+    padding: 0 2rem 2rem;
+    border: 1px dashed #dfdede;
+}
