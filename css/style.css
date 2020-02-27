@@ -1,9 +1,71 @@
+@font-face {
+    font-family: "remixicon";
+    src: url('/remixicon/remixicon.eot?t=1580819880586'); /* IE9*/
+    src: url('/remixicon/remixicon.eot?t=1580819880586#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url("/remixIcon/remixicon.woff2?t=1580819880586") format("woff2"),
+    url("/remixIcon/remixicon.woff?t=1580819880586") format("woff"),
+    url('/remixIcon/remixicon.ttf?t=1580819880586') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('/remixIcon/remixicon.svg?t=1580819880586#remixicon') format('svg'); /* iOS 4.1- */
+    font-display: swap;
+}
+
+[class^="ri-"], [class*=" ri-"] {
+    font-family: 'remixicon' !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.ri-lg { font-size: 1.3333em; line-height: 0.75em; vertical-align: -.0667em; }
+.ri-xl { font-size: 1.5em; line-height: 0.6666em; vertical-align: -.075em; }
+.ri-xxs { font-size: .5em; }
+.ri-xs { font-size: .75em; }
+.ri-sm { font-size: .875em }
+.ri-1x { font-size: 1em; }
+.ri-2x { font-size: 2em; }
+.ri-3x { font-size: 3em; }
+.ri-4x { font-size: 4em; }
+.ri-5x { font-size: 5em; }
+.ri-6x { font-size: 6em; }
+.ri-7x { font-size: 7em; }
+.ri-8x { font-size: 8em; }
+.ri-9x { font-size: 9em; }
+.ri-10x { font-size: 10em; }
+.ri-fw { text-align: center; width: 1.25em; }
+
+.ri-4k-fill:before { content: "\ea01"; }
+.ri-4k-line:before { content: "\ea02"; }
+.ri-a-b:before { content: "\ea03"; }
+.ri-account-box-fill:before { content: "\ea04"; }
+.ri-menu-line:before { content: "\eecd"; }
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 body{
     position: relative;
     height: 100%;
     width: 100%;
     background-color: black;
-    font-family: Helvetica, Menlo, "Helvetica Neue", fantasy;
+    font-family: Helvetica, Menlo,"remixicon", "Helvetica Neue", fantasy;
     overflow-y: scroll;
     overflow-x: hidden;
     padding: 0;
@@ -63,12 +125,43 @@ body{
     height: 100%;
     opacity: 0.6;
 }
+.navbar-toggle {
+    position: absolute;
+    top: 1rem;
+    left: 7rem;
+    border: none;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.5);
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.9;
+}
+.navbar-toggle::before {
+    content: '\eecd';
+    font-family: "remixicon";
+    font-size: larger;
+}
+button {
+    outline: none;
+    cursor: pointer;
+    text-transform: none;
+    overflow: visible;
+    font-family: inherit ;
+    font-size: 100% ;
+    line-height: 1.15 ;
+    margin: 0 ;
+}
+
+
 
 .navbar {
     position: relative;
     padding-top: 3rem;
     text-align: center;
 }
+
 
 .logo {
     margin-bottom: 2rem;
@@ -84,6 +177,8 @@ body{
     padding-left: 0;
     margin-left: 0;
 }
+
+
 
 .navbar .nav .nav-item-link {
     font-size: 0.95rem;
